@@ -1,1 +1,10 @@
-# Formation_JS_Fullstack_2015_12_21
+# Formation JS Fullstack Ilyeum
+
+## Installation
+
+### Pré-requis
+* Chrome
+* Git
+* Webstorm
+* Node.js (0.12, 4 ou 5)
+* 
