@@ -1,0 +1,20 @@
+{
+  "name": "address-book",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/bioub/Formation_JS_Fullstack_2015_12_21",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "1"
+  }
+}
