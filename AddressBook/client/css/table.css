@@ -1,0 +1,4 @@
+.table-striped > tbody > tr:nth-of-type(1) {
+    background-color: #2b669a;
+    color: #fff;
+}
