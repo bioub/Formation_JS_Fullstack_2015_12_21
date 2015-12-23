@@ -19,6 +19,15 @@ module.exports = function(grunt) {
                         cwd: 'client/bower_components/bootstrap',
                         src: 'fonts/*',
                         dest: 'dist/client'
+                    },
+                    {
+                        expand: true,
+                        src: 'server/**',
+                        dest: 'dist'
+                    },
+                    {
+                        src: 'package.json',
+                        dest: 'dist/package.json'
                     }
                 ]
             }
