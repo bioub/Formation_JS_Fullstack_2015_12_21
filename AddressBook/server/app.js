@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Contact = require('./models/contact');
+const path = require('path');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
@@ -13,6 +14,17 @@ mongoose.connect(mongoUrl);
 
 var app = express();
 app.use(bodyParser.json()); // créé req.body
+
+app.use(express.static(path.join(__dirname, '..', 'client')));
+
+function serveIndex(req, res, next) {
+    res.sendFile(path.join(__dirname, '..', 'client', 'index.html'));
+}
+
+app.get('/contact/ajouter', serveIndex);
+app.get('/contact/:id', serveIndex);
+app.get('/contact/:id/modifier', serveIndex);
+app.get('/contact/:id/supprimer', serveIndex);
 
 // Convention d'URL : RESTful
 // list : GET /

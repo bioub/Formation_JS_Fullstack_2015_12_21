@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Helloworld</title>
+</head>
+<body ng-app>
+<div>
+    Prénom :
+    <input type="text" name="prenom" id="prenom" ng-model="prenom">
+</div>
+<p>
+    Bonjour <span id="result" ng-bind="prenom"> </span>
+</p>
+<script src="../bower_components/angular/angular.js"></script>
+</body>
+</html>

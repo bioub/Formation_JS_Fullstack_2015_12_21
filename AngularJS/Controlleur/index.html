@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Helloworld</title>
+    <link rel="stylesheet" href="../bower_components/angular/angular-csp.css">
+</head>
+<body ng-controller="PrenomListController">
+<div>
+    Prénom :
+    <input type="text" name="prenom" id="prenom" ng-model="prenom">
+    <button ng-click="ajouter()">Ajouter</button>
+</div>
+<ul>
+    <li ng-repeat="prenom in prenoms track by $index" ng-cloak>
+        {{$index}} - {{prenom}}
+        <span ng-if="$last">(dernier)</span>
+    </li>
+</ul>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
