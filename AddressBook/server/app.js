@@ -8,7 +8,7 @@ const path = require('path');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT || 3000;
-const mongoUrl = 'mongodb://localhost/addressbook';
+const mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/addressbook';
 
 mongoose.connect(mongoUrl);
 
