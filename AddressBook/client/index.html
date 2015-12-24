@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- build:css css/app.css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
@@ -23,17 +24,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">AddressBook</a>
+            <a class="navbar-brand" href="/">AddressBook</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacts <span class="caret"></span></a>
+                    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contacts <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.html">Lister</a></li>
-                        <li><a href="app/contact/views/ajouter.html">Ajouter</a></li>
+                        <li><a href="/">Lister</a></li>
+                        <li><a href="/contact/ajouter">Ajouter</a></li>
                     </ul>
                 </li>
             </ul>
@@ -53,9 +54,11 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert-dev.js"></script>
     <script src="app/contact/services/contact.js"></script>
     <script src="app/contact/controllers/list.js"></script>
     <script src="app/contact/controllers/afficher.js"></script>
+    <script src="app/contact/controllers/ajouter.js"></script>
     <script src="app/app.js"></script>
     <!-- endbuild -->
 </body>

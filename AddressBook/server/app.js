@@ -21,10 +21,7 @@ function serveIndex(req, res, next) {
     res.sendFile(path.join(__dirname, '..', 'client', 'index.html'));
 }
 
-app.get('/contact/ajouter', serveIndex);
-app.get('/contact/:id', serveIndex);
-app.get('/contact/:id/modifier', serveIndex);
-app.get('/contact/:id/supprimer', serveIndex);
+app.get('/contact/*', serveIndex);
 
 // Convention d'URL : RESTful
 // list : GET /
@@ -67,7 +64,12 @@ app.post('/api/v1/contacts/:id', function(req, res, next) {
 });
 // delete
 app.delete('/api/v1/contacts/:id', function(req, res, next) {
+    var id = req.params.id;
 
+    Contact.findByIdAndRemove(id, function(err, contact) {
+        if (err) return next(err);
+        res.json(contact);
+    });
 });
 
 app.use(function(err, req, res, next) {

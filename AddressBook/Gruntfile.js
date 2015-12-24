@@ -22,6 +22,11 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
+                        src: 'client/app/*/views/**',
+                        dest: 'dist'
+                    },
+                    {
+                        expand: true,
                         src: 'server/**',
                         dest: 'dist'
                     },
